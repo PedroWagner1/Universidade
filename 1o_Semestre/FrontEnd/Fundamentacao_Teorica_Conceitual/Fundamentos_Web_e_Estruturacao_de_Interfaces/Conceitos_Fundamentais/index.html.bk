@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conceitos Fundamentais</title>
+
+    </head>
+
+
+    <body>
+
+        <header>
+            <h1>Fundamentos da Web e Estruturação de Interfaces</h1>
+            <h5><p>Arquivo index referente aos meus estudos da seção.</p></h5><br/>
+        </header>
+
+
+
+        <section> <!--  Seção Tecnologia por Trás da Comunicação Web-->
+
+            <h2>A tecnologia por trás da comunicação Web: Http e Https</h2>
+                <p><em>
+                    <strong>HTTP</strong>, do inglês <strong>Hypertext Transfer Protocol</strong> ou Protocolo de Transferência de Hipertexto,
+                    é um protocolo (conjunto de regras que padronizam como dois dispositivos finais se comunicam em uma rede) utilizado na comunicação<br>
+                    web. Quando usamos um navegador em nossa máquina, por exemplo, estamos utilizando um Software da camada de aplicação destinado a estas comunicações web. 
+                    Ao usarmos o cliente Browser e digitarmos um link na<br> barra de pesquisa, quando estabelecemos comunicação e visualizamos o respectivo site e o arquivo
+                    retornado, na verdade o que ocorreu foi um (ou mais) processo(s) HTTP de requisição e resposta. Já o <strong>HTTPS</strong> significa<br> HTTP Secure, e aplica tecnologias de criptografia <strong>TLS / SSL</strong> 
+                    para garantir segurança na comunicação. Sendo uma condição quase obrigatória para qualquer projeto que prese por Integridade e Confiabilidade de dados<br>
+                    em suas soluções, o HTTPS e as Certificações SSL/TLS são triviais para manter a segurança e confiabilidade no serviço.
+
+                </em></p>
+                <h3>Burp Suite: Vídeo Demonstração</h3>
+                <p>BurpSuite é uma ferramenta que eu conheci realizando meus estudos de Segurança da Informação e Hacking Ético, e é uma excelente ferramenta para compreender<br>
+                na prática como os protocolos HTTP(S) funcionam. Ele permite enviar, alterar, automatizar e scriptar requisições HTTP e HTTPS para análise de resposta. </p>
+               <video controls loop playsinline width="1000">
+                <source src="img/video.mp4" type="video/mp4">
+                </video>
+        </section>
+
+
+
+        <section>       <!--    Seção Estrutura de Pastas em um Projeto Front-End-->
+
+            <br><h2>    Estrutura de Pastas em um Projeto Front-End  </h2>
+
+                <p>A estruturação de pastas e arquivos em um projeto Front-End é um fator muito importante para garantir legibilidade, organização e que o projeto não acabe ficando confuso ao passar do tempo.
+                    <br>Sabemos que qualquer tarefa que façamos que exija lapidação, com o tempo tendemos a tornar o produto final de acordo com o que imaginamos ser a melhor vesão deste produto. Organizar<br>
+                    corretamente nosso ambiente de trabalho significa não nos perdermos no futuro e garantir uma boa leitura e praticidade das tarefas. Em geral, uma estrutura de pastas é geralmente semelhante a: </p>
+
+                    <ul>
+
+                            <li>Pasta do Projeto</li>
+
+                            <ul>
+                                
+                                <li>index.html (Arquivo Principal (home) do projeto)</li>
+                            
+                                <li>assets/</li>
+                                        <ul><li>fonts/</li>
+                                         <ul><li>* Arquivos de Fontes (.ttf, etc)</li></ul>
+                                         <li>icons/</li><ul><li>Arquivos de Ícones</li></ul></ul>
+                            
+                                <li>css/</li>
+                                <ul><li>Arquivos de estilização (.css)</li></ul>
+
+                                <li>docs/</li>
+                                <ul><li>README.md (exemplo)</li></ul>
+
+                                <li>img/</li>
+                                <ul><li>Arquivos de imagem ou multimídia</li></ul>
+
+                                <li>js/</li>
+                                <ul><li>Scripts (neste caso javascript)</li></ul>
+                            </ul>
+                    </ul>   
+                    <p><em>ps: Este repositório está utilizando esta estrutura como exemplificação.</em></p>
+        </section><br>
+
+
+
+        <section>   <!-- Seção Registro de Domínio -->
+            
+        <h2>Registro de Domínio</h2>
+        <p>O domínio é o endereço multicaracteres único que identifica uma máquina na internet. Diferente do endereço lógico Ipv4 ou Ipv6 que efetivamente identifica
+            uma máquina em uma rede, o domínio é um objeto em texto, que é convertido em endereço lógico através do protocolo <strong>DNS (Domain Name System)</strong>. 
+            Este protocolo foi criado pensando em facilitar o acesso a servidores e máquinas, tendo em vista que digitar manualmente cada dígito de um endereço IP seria 
+            inviável do ponto de vista prático.</p>
+
+        <h3>Propagação DNS</h3>
+        <p>Um domínio pode levar cerca de até 48 horas para se propagar totalmente. Durante este período, dependendo do SIP e da localização do usuário, este pode não conseguir
+            acessar o destino. Por este motivo é conveniente realizar mudanças DNS com aviso prévio e fora de horários de pico de acesso.
+        </p>
+        <p><em>Mais sobre Propagação DNS em <a href="https://ultahost.com/blog/pt/o-que-e-a-propagacao-de-dns/" target="_blank">Ultrahost - Propagação DNS</a></em></p>
+
+        </section>
+
+
+
+        <section> <!--   Seção Apresentação HTML5   -->
+
+
+            <br><h2>HTML5: A linguagem de Marcação da Web Moderna</h2>
+            <p>
+                <strong>HTML5 (HyperText Markup Language versão 5)</strong> representa a evolução do HTML antigo para uma melhor versão com <a href="https://github.com/PedroWagner1/Universidade/blob/main/1o_Semestre/FrontEnd/Fundamentacao_Teorica_Conceitual/Fundamentos_Web_e_Estruturacao_de_Interfaces/HTML_Semantica/index.html">Semântica HTML</a>, API's Javascript avançadas, melhor suporte multimídia dentre outras vantagens.<br>
+                A declaração: <pre><em><code>&lt;!DOCTYPE HTML5&gt;</code></em></pre>
+                É o primeiro elemento de qualquer documento HTML5, informando ao navegador que os documentos referentes seguem o padrão desta versão. Abaixo um exemplo de um código HTML5 básico:
+                <pre>   <code><em>    
+
+&lt;!DOCTYPE HTML&gt;
+&lt;HTML LANG="pt-BR"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Título&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+                    ...
+&lt;/body&gt;
+&lt;/html&gt;
+                </em></code></pre>
+            </p>
+        </section>
+
+
+
+
+
+
+    </body>
+
+
+
+</html>
