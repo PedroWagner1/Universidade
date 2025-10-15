@@ -1,0 +1,137 @@
+<!--    Arquivo Referente aos estudos (Codificado por mim)  -->
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <title>HTML5: Estrutura Semântica e Formulários</title>
+    <meta charset="UTF-8">
+    <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header>
+
+    <h1>HTML5: Estrutura Semântica e Formulários</h1>
+    <time datetime="2025-10-15">15 de Outubro de 2025</time>
+</header><BR/>
+
+<main>
+
+    <section> <!--   Seção referente à introdução do conteúdo   -->
+
+        <h2>A Revolução Semântica do HTML5:</h2>
+
+        <p> A "mágica" dos elementos semânticos do HTML5 vão além de um fator visual, eles
+            comunicam significado a respeito de seu conteúdo, facilitando leitura e identificação por
+            parte de navegadores, mecanismos de busca e demais tecnologias. A mudança do HTML para o HTML5
+            marca uma grande mudança na acessibilidade e otimização em motores de busca (SEO).
+        </p>
+
+            <h4>Os elementos Semânticos introduzidos no HTML5 incluem:</h4>
+
+            <ul>
+                <li>article</li>
+                <li>header</li>
+                <li>section</li>
+                <li>footer</li>
+                <li>main</li>
+                <li>dentre outros</li>
+            </ul>
+
+        <section> <!--   Subseção: Elementos Semânticos vs Não Semânticos.   -->            
+            <h3>Elementos Semânticos vs Não Semânticos:</h2>
+
+                <p>Tag's como div e span (além de outros) servem principalmente para agrupamento e estilização,
+                    sendo mais utilizados em diferentes tecnologias de estilização. Porém não carregam o elemento semântico sobre si. Já tags como article, footer (entre outros) comunicam o tipo de seu conteúdo.
+                </p>
+        </section>
+   </section>
+
+
+   <section> <!--   Seção referente à Hierarquia de Conteúdo e Outline    -->
+
+    <br><h2>Hierarquia de Conteúdo e Outline:</h2>
+    <p>A estrutura de hierarquia em um documento HTML5 é importante para criar-mos um esboço (outline) lógico de nossa aplicação. Esta estrutura é criada a partir
+        de elementos de cabeçalho (h1 - h6) e tags de seccionamento.
+    </p>
+
+    <ul>
+        <li>main</li>
+            <ul>
+                <li>h1: Título</li>
+                <li>section:</li>
+                    <ul>
+                        <li>h2: Fundamentos</li>
+                        <li>article: texto...</li>
+                        <li>Etc...</li>
+                    </ul></ul></ul>
+   </section>
+
+
+
+   <br><section> <!--   Seção referente à Formulários HTML5: Interação e Validação    -->
+
+    <h2>Formulários HTML5: Interação e Validação</h2>
+
+        <p>Formulários representam o principal meio de interação entre cliente(usuário) e servidor em uma aplicação web. O HTML5 introduziu novas tag's de input,
+            atributos para validação e elementos que amplificam a experiência do usuário na aplicação.
+        </p>
+
+
+        <h3>Tag's Modernas:</h3>
+
+        <ul>
+            <li>fieldset</li>
+            <li>legend</li>
+            <li>label</li>
+        </ul>
+
+        <form>
+
+            <fieldset>
+
+                <legend>Suas informações:</legend>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="idade">Idade: (Com máscara de Input e Validação pattern)</label>
+                <input type="text" id="idade" name="idade" patter="[0-9]{2}" required>
+
+            </fieldset>
+            <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+   </section>
+
+
+   <br> <section>   <!--   Seção referente à Elementos Interativos Avançados     -->
+
+        <h2>Elementos Interativos Avançados: HTML5 oferece elementos que aumentam a interatividade sem necessidade de Javascript</h2>
+
+
+        <details>
+        <sumarry>Carregar mais Informações</sumarry>
+                <p>Você carregou mais informações clicando na renderização visual da tag details. Este conteúdo está dentro da tag p, que está 
+                    dentro da tag details</p>
+        </details>
+
+
+     <br>   <datalist id="frutas">
+            <option value="banana">Banana</option>
+            <option value="maçã">Maçã</option>
+            <option value="manga">Manga</option>
+        </datalist>
+        <label for="frutas">Escolha:</label>
+        <input list="frutas" id="frutas">
+
+    </section>
+
+
+</main>
+
+
+
+</body>
+</html>
