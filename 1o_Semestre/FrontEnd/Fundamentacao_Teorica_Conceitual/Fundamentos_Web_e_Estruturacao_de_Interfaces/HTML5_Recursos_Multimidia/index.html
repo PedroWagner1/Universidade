@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<title>HTML5 - Recursos Multimídia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <h1>HTML5 - Recursos Multimídia</h1>
+    <p>Subseção da Seção Fundamentos da Web e Estruturação de Interfaces da Fundamentação Teórica Conceitual da Disciplina de Front-End do 1o semestre de Ciência da Computação na Universidade Cruzeiro do Sul</p>
+</header>
+<main>
+
+    <section> <!--   Seção Vídeo   -->
+
+        <h2>Vídeo: A nova era da Mídia Web</h2>
+        <p>Importar vídeos em páginas web necessitava de plugins como o Flash Player antes do HTML5, causando problemas de segurança (como vulnerabilidades) e compatibilidade.</p>
+        <ul>
+          <li>  <a href="https://nvd.nist.gov/vuln/detail/CVE-2015-5119?utm_source=chatgpt.com" target="_blank">CVE-2015-5119</a></li>
+          <li> <a href="https://success.trendmicro.com/en-US/solution/KA-0005522?utm_source=chatgpt.com" target="_blank">CVE-2015-5119</a></li>
+          <li><a href="https://www.zero-day.cz/database/345/?utm_source=chatgpt.com" target="_blank">CVE-2013-5331</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2010-1297?utm_source=chatgpt.com" target="_blank">CVE-2010-1297</a></li>
+          <em>Cve's de Vulnerabilidades conhecidas no Flash Player da época.</em>
+        </ul>
+
+
+        <p>O elemento video mudou o cenário da aplicação de multimídia em páginas web, oferecendo reprodução <strong>nativa</strong> de vídeo em todos os navegadores da época.</p>
+
+        <h3>Implementação Básica de Vídeo:</h3>
+        <video width="600" height="400" controls poster="media/img2.png">
+            <source src="media/forest.mp4" type="video/mp4">
+        </video>
+
+        <h3>Os elementos configurados nestga implementação foram:</h3>
+        <ul>
+            <li>video</li>
+                <ul>
+                    <li>width = 600</li>
+                    <li>height = 400</li>
+                    <li>controls (define controles de reproduição)</li>
+                    <li>poster (define imagem pré visualização)</li>
+                </ul>
+
+            <li>source (para indicar o arquivo mp4)</li>
+        </ul>
+
+
+        <h3>Atributos Essenciais do Elemento Video:</h2>
+        <ul>
+            <li>controls - <em>Controles de Reprodução</em></li>
+            <li>autoplay - <em>Executa vídeo automaticamente (vem com muted em muitos clientes)</em></li>
+            <li>loop - <em>Vídeo fica em loop contínuo</em></li>
+            <li>muted - <em>Omite o áudio do vídeo</em></li>
+            <li>preload - <em>define estratégia de carregamento</em></li>
+            <li>poster - <em>define imagem de pré visualização</em></li>
+        </ul>
+    </section>
+
+    
+    <br><section>   <!--   Seção Métodos Javascript     -->
+
+        <h2>Métodos Javascript para Controle de Vídeos:</h2>    
+
+        <p>Alguns métodos existentes em <strong>javascript</strong> para controle de vídeo são:</p>
+
+        <code>
+
+            const video = document.getElementById('video');<br>
+
+            // Métodos Principais:<br>
+<br>
+                video.play();<br>
+                video.pause();<br>
+                video.load();<br>
+
+            // Propriedades Úteis:<br>
+<br>
+                video.currentTime = 30; // Pula 30 segundos<br>
+                video.volume = 0.5; // Volume em 50%<br>
+                video.playbackRate = 1.5;   //  Vídeo em velocidade 1.5x<br>
+        </code>
+
+
+        <h3>Eventos de Vídeo:</h3>
+        <code>
+            video.addEventListener('loadstart', () => console.log('Iniciou Carregamento'))<br>
+
+            video.addEventListener('canplay', () => console.log('Pronto para Reprodução'))<br>
+
+            video.addEventListener('ended', () => console.log('Reprodução finalizada.'))<br>
+
+            video.addEventListener('error', () => console.log('Erro na reprodução'))<br>
+        </code>
+    </section>
+
+
+    <br><secion> <!--   Seção áudio e som de qualidade profissional.    -->
+
+        <h2>Áudio e Som de Qualidade Profissional:</h2>
+
+        <p>O elemento audio segue uma estrutura semelhante ao video e fornece reprodução nativa de áudio</p>
+
+        <audio preload="metadata" controls>
+            <source src="media/upbeat.mp3" type="audio/mpeg">
+            <p>seu navegador não suporta audio</p>
+        </audio>
+
+        <h3>Player de Áudio customizado:</h3>
+
+
+         <audio id="player" preload="metadata">
+            <source src="media/upbeat.mp3" type="audio/mpeg">
+        </audio>
+        <div class="controls">
+
+            <button onclick="playPause()">▶️ / ⏸️</button>
+            <input type="range" id="progress" min="0" max="100" value="0">
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </section><br>
+    
+    <section>   <!--    Seção Elementos de Incororação  -->
+        <h2>Elementos de Incorporação: Possibilidades Expandidas.</h2>
+
+        <h3>Iframe: Incorporação de Conteúdo Externo</h3>
+        <iframe src="https://www.youtube.com/embed/-3fcwda1U8k?si=izU5TI5lB--6OLs8" width="800" height="400"></iframe>
+
+        <h3>Object Embed - Conteúdo Alternativo</h3>
+        <h4>Sun Tzu: A Arte da Guerra</h4>
+        <object data="media/sun_tzu.pdf" type="application/pdf" width="800" height="400">
+            <p>seu navegador não suporta PDF</p>
+        </object>
+
+    </section>
+
+
+
+</main>
+
+
+
+</body>
+</html>
