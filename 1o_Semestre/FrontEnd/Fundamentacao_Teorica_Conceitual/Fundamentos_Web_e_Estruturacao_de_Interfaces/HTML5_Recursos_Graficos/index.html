@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <title>HTML5  Recursos Gráficos</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 - Recursos Gráficos</h1>
+        <time datetime="2025-10-21">21 de Outubro de 2025</time>
+    </header>
+    <main>
+
+        <secion> <!--   Seção Apresentação Canvas   -->
+
+            <h2>Canvas: O poder do desenho programático:</h2>
+            <p>O elemento canvas é capaz de transformar qualquer página web em uma tela de desenho digital, permitindo
+                a criação de gráficos, jogos e animações através do Javascript. Canvas é uma das funcionalidades mais 
+                poderosas presentes no HTML5
+            </p>
+
+        
+        <h3>Configuraçao Básica do Canvas:</h3>
+            <code>
+&lt;canvas id="Canvas1" width="800" height="600"&gt;<BR/>
+Seu navegador não suporta Canvas<br/>
+&lt;/canvas&gt;<br/>
+            </code>
+
+            <h3>Desenho Básico com Javascript: Círculo, Retângulo preenchido, Retângulo com borda e Gradiente Linear</h3>
+
+            <canvas id="esteCanvas" width="800" height="600">
+                Seu navegador não suporta Canvas
+            </canvas>
+            <script >
+
+                const canvas = document.getElementById('esteCanvas');
+                const ctx  = canvas.getContext('2d');
+
+                //  Retângulo Preenchido
+                ctx.fillStyle = '#3498db';
+                ctx.fillRect(50, 50, 200, 100);
+                // Retângulo com Borda
+                ctx.strokeStyle = '#e74c3c';
+                ctx.lineWidth = 3;
+                ctx.strokeRect(300, 50, 200, 100);
+                // Círculo
+                ctx.beginPath();
+                ctx.arc(150, 250, 50, 0, 2 * Math.PI);
+                ctx.fillStyle = '#2ecc71';
+                ctx.fill();
+
+                // Gradiente Linear
+                const gradiente = ctx.createLinearGradient(0, 0, 200, 0);
+                gradiente.addColorStop(0, '#FF7675');
+                gradiente.addColorStop(1, '#74b9ff');
+                ctx.fillStyle = gradiente;
+                ctx.fillRect(50, 350, 200, 100);
+                // Texto Estilizado
+                ctx.font = '30px Arial';
+                ctx.fillStyle = '#2c3436'
+                ctx.fillText('HTML5 Canvas', 300, 400)
+            </script>
+
+        </section>
+
+        <section><!--    Seção SVG: Gráficos Vetoriais Escaláveis     -->
+
+            <h2>SVG: Gráficos Vetoriais Escaláveis</h2>
+            <p>SVG (Scalable Vector Graphics) oferece uma alternativa 
+            baseada em markup para criar gráficos vetoriais que mantém qualidade em qualquer resolução</p>
+
+            <h4>Vantagens do SVG:</h4>
+            <ul>
+                <li>Escalabilidade sem perca de qualidade</li>
+                <li>Menor tamanho de arquivo para gráficos simples</li>
+                <li> Possibilidade de Estilização com CSS</li>
+                <li>Acessibilidade superior (elementos podem ter atributos semânticos)</li>
+                <li>Animação com CSS ou Javascript</li>
+            </ul>
+
+            <h3>SVG Básico:</h3>
+            <svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+
+                <!--    Retangulo   -->
+                    <rect x=50 y="50" width="150" height="100" fill="#3498db" stroke="#2980b9" stroke-width="2"></rect>
+                
+                <!--    Círculo     -->
+                    <circle cx="300" cy="100" r="50" fill="#e74c3c" opacity="0.8"></circle>
+
+                <!--    Linha   -->
+                    <line x1="50" y1="200" y2="200" stroke="#34495e" stroke-width="3"></line>
+
+                <!--    Texto      -->
+                    <text x="200" y="250" text-achor="middle" font-family="Arial" font-size="20" fill='#2c3c50'>
+                            Gráfico SVG
+              </text>
+            </svg>
+        </section>
+
+
+
+        <h2>SVG Complexo com Paths:</h2>
+        <svg width="300" height="200">
+            <path d="M50, 150 Q150, 50 250, 150" stroke="#9b59b6"></path>
+
+                <polygon points="150,20 176,92 250,92 192,138 218,210 150,164 82,210 108, 138 50,92 124,92"
+             fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+
+         
+        </svg>
+    </main>
+
+</body>
+</html>
