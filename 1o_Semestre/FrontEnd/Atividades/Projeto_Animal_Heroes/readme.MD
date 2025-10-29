@@ -86,3 +86,4 @@ Bem, eu fiquei aprox 1 semana codificando toda a página e o código é bem mais
 
 
 <img src="https://i.postimg.cc/15652DxW/foto-index.png"></img>
+<img src="https://i.postimg.cc/G3DCmrMp/foto-index-responsiva.png"></img>
