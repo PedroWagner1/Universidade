@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  Cabeçalho   :*/
+
+    header {
+        position: fixed;
+        background: linear-gradient(135deg, #2F4F4F, #2E8B57);
+        width: 100%;
+        height: 59px;
+        top:0;
+        left:0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    header a {
+        color:white;
+        padding-left: 20px;
+        font-style: italic;
+        opacity: 0.8;
+        font-size:30px
+    }
+
+
+    header p:hover{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        opacity: 1.0;
+    }
+
+    header p a{
+    text-decoration: none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 79px;
+    gap:1vh;
+    background: #374d57;
+    background: linear-gradient(90deg,rgba(55, 77, 87, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(83, 166, 111, 1) 56%, rgba(76, 135, 76, 1) 100%, rgba(237, 221, 83, 1) 100%);
+    min-height: 100vh;
+}
+
+main h1 {
+    text-align:center;
+    padding-top: 80px;
+    font-size:75px;
+    color:white;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+
+
+main h3{
+    font-size: 40px;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.pessoal {
+    display: grid;
+    border: none;
+    padding-top:4vh;
+    justify-content: space-evenly;
+    justify-items: center ;
+    align-items: center;
+    gap:2vh;
+}
+
+
+
+
+.pessoal label {
+    font-size: 25px;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.pessoal input {
+    border-radius: 10px;
+    border:none;
+    height: 5vh;
+    width: 50%;
+    background-color: #98FB98;
+}
+
+.nome-sobrenome {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:2vh;
+    width: 100%;
+
+}
+
+
+
+.nome-sobrenome .campo input {
+    border-radius: 10px;
+    border:none;
+    height: 5vh;
+    width: 80%;
+    background-color: #98FB98;
+}
+
+
+
+.email-numero {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 4vh;
+    width: 100%;
+    gap:1VH ;
+}
+
+.email-numero input {
+    border-radius: 10px;
+    border:none;
+    height: 5VH ;
+    width: 80%;
+    background-color: #98FB98;
+}
+
+
+
+.endereco-estado {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:2vh;
+    flex: 50px 100px 2;
+    width: 100%;
+    padding-top: 4vh;
+}
+
+
+.endereco-estado .campo input {
+    border-radius: 10px;
+    border:none;
+    height: 4vh;
+    width: 50%;
+    background-color: #98FB98;
+}
+
+.endereco-estado .campo select {
+    border-radius: 10px;
+    font-weight: bold;
+    color:#228B22;
+    width:20%;
+    height:35px;
+}
+
+
+
+
+
+.comentarios {
+    display: grid;
+    border: none;
+    padding-top:4vh;
+    justify-content: space-evenly;
+    justify-items: center ;
+    align-items: center;
+    gap:2vh;
+
+}
+
+.comentarios label {    
+    font-size: 45px;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
+
+.comentarios input {
+    border-radius: 10px;
+    border:none;
+    height: 20vh;
+    width: 50%;
+
+}
+
+.comentarios button {
+    width:50%;
+    border-radius: 40px;
+    border:none;
+    height: 8vh;
+    background-color: #228B22;
+    font-size: 35px;
+    color:white;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1vh;
+    
+}
+
+
+footer {
+    background-color: #2F4F4F;
+    height: 40px;
+}
+
+footer p {
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    padding-top: 9px;
+}

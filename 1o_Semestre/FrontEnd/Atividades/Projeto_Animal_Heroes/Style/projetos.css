@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  Cabeçalho   :*/
+
+    header {
+        position: fixed;
+        background: linear-gradient(135deg, #2F4F4F, #2E8B57);
+        width: 100%;
+        height: 59px;
+        top:0;
+        left:0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    header a {
+        color:white;
+        padding-left: 20px;
+        font-style: italic;
+        opacity: 0.8;
+        font-size:30px
+    }
+
+
+    header p:hover{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        opacity: 1.0;
+    }
+
+    header p a{
+    text-decoration: none;
+}
+
+/*  Cabeçalho   :*/
+
+main {
+    background: #8cd4ca;
+    background: linear-gradient(179deg,rgba(140, 212, 202, 1) 0%, rgba(219, 218, 200, 1) 100%);
+    min-height: 100vh;
+
+
+}
+
+main h1{
+    padding-top: 100px;
+    text-align: center;
+    font-size:90px;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+.gride {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding-top: 70px;
+  justify-items: center;
+}
+
+
+.gride h2 {
+    color:white;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.gride img {
+    padding-top: 30px;
+    margin:1vw;
+    border-radius: 300px;
+    height: auto;
+    width:100%;
+    max-width:500px
+}
+
+
+.gride p {
+    text-align: center;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+
+
+
+footer {
+    background-color: rgba(219, 218, 200, 1);
+    height: 30px;
+    font-size: 15px;
+    padding-top: 20px;
+    text-align: center;
+    color:white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
