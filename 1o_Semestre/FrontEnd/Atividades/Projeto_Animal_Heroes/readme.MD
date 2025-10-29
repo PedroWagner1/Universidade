@@ -83,3 +83,6 @@ Codei Scripts/btn_redirecionar_obrigado.js com basicamente o mesmo código do bt
 <h3>Conclusão</h3>
 
 Bem, eu fiquei aprox 1 semana codificando toda a página e o código é bem mais extenso que a minha explicação, no geral eu fiquei orgulhoso com o resultado e considerando que meu forte é mais back-end, eu acho que ficou muito bom. EU já havia conhecimentos de HTML e CSS3 (Mas não de JS) antes e isso me facilitou um pouco. Eu nunca havia programado efetivamente em JS e modeste a parte eu gostei bastante, achei divertido. Portanto creio eu ue possivelmente vou me aprofundar mais na linguagem, principalmente por causa do canva que eu vi alguns projetos incríveis. Enfim, essee projeto me inspirou a estudar mais a respeito de Javascript e de páginas web, e eu achei o resultado muito bom. Espero que gostem : )
+
+
+<img src="https://i.postimg.cc/15652DxW/foto-index.png"></img>
