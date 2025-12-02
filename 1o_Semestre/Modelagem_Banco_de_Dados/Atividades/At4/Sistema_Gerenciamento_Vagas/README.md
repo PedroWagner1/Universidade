@@ -78,7 +78,7 @@ Estas funções possuem argumentos que devem ser passados aos parâmetros da fun
 o sistema exibe o erro e retorna False.
 
         
-Caso uma função de db.py retorne True, então os dados foram inseridos com suceso, caso contrário, houve algum erro. É exatamente esta condição que nós utilizamos para atualizar a label de erros ou acertos presente em cada janela.
+Caso uma função de db.py retorne True, então os dados foram inseridos com sucesso, caso contrário, houve algum erro. É exatamente esta condição que nós utilizamos para atualizar a label de erros ou acertos presente em cada janela.
 
         
 <code>     btn_atribuir = ctk.CTkButton(janela_veiculo, text='Adicionar Veículo', command=lambda:lbl_erro.configure(text='Veículo Adicionado com Sucesso') if db.adicionar_veiculo(txt_placa.get(), txt_cor.get(), txt_modelo.get(), None if box_cpfcliente.get() == 'N e n h u m' else box_cpfcliente.get().split(' ')[0], None if box_cpffuncionario.get() == 'N e n h u m' else box_cpffuncionario.get().split(' ')[0]) else lbl_erro.configure(text='Erro ao adicionar! Revise os dados'))
