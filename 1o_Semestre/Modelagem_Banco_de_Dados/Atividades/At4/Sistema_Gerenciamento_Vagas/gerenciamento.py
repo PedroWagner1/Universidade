@@ -226,8 +226,8 @@ def alocar_vaga():
 
     #   aTRIBUIR:
 
-    #btn_atribuir = ctk.CTkButton(janela_alocacao, text='Alocar Vaga', command=lambda: lbl_estado.configure(text='Vaga Alocada!') if db.alocar_vaga(txt_data.get(), txt_hora.get(), box_vagas.get()[0], box_vagas.get()[1:2], box_veiculo))
-    #btn_atribuir.pack(pady=(10,15))
+    btn_atribuir = ctk.CTkButton(janela_alocacao, text='Alocar Vaga', command=lambda: lbl_estado.configure(text='Vaga Alocada!') if db.alocar_vaga(txt_data.get(), txt_hora.get(), box_vagas.get()[0], box_vagas.get()[1:2], box_veiculo.get()) else lbl_estado.configure(text='Erro ao atribuir a vaga'))
+    btn_atribuir.pack(pady=(10,15))
 
 
     janela_alocacao.mainloop()
