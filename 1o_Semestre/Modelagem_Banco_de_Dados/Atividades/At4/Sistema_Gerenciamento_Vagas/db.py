@@ -130,9 +130,6 @@ def listar_veiculos():
     for tupla in retorno:
         valores = []
         for valor in tupla:
-
-            try:
-                int(valor[-1])
             valores.append(valor)
         lista.append(valores)
 
