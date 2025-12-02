@@ -60,24 +60,26 @@ A maioria das funções são chamadas quando o usuário clica em algum botão re
 
 #   O arquivo gerenciamento.py
 
-    Este é o arquivo que contém todas as chamadas de consultas (do db.py) e todo o código do sistema de gerenciamento. Eu optei por definir cada subjanela da janela principal em funções neste módulo, ao invés de criar em outros módulos. A janela principal possui alguns botões, nos quais recebem um argumento command= referenciando suas respectivas funções que abrem suas janelas. Em cada janela, nós temos campos de inserção (ctk.CTkEntry(), ctk.CTkComboBox()) de dados para os dados nescessários e requerentes a cerca das operações no banco de dados. A respeito das verificações dos dados inseridos nestes campos, por ser um projeto com intuito didático e de prova de conhecimento, eu decidi não implementar estas verificações, tabém porque estava com pouco tempo para finalizar. AInda assim o formato de como os dados devem ser inseridos estão informados nos respectivos placeholder's de cada entrada.
+Este é o arquivo que contém todas as chamadas de consultas (do db.py) e todo o código do sistema de gerenciamento. Eu optei por definir cada subjanela da janela principal em funções neste módulo, ao invés de criar em outros módulos. A janela principal possui alguns botões, nos quais recebem um argumento command= referenciando suas respectivas funções que abrem suas janelas. Em cada janela, nós temos campos de inserção (ctk.CTkEntry(), ctk.CTkComboBox()) de dados para os dados nescessários e requerentes a cerca das operações no banco de dados. A respeito das verificações dos dados inseridos nestes campos, por ser um projeto com intuito didático e de prova de conhecimento, eu decidi não implementar estas verificações, tabém porque estava com pouco tempo para finalizar. AInda assim o formato de como os dados devem ser inseridos estão informados nos respectivos placeholder's de cada entrada.
 
-    Exemplo de um campo de entrada de texto na janela veiculo:
+Exemplo de um campo de entrada de texto na janela veiculo:
 
-    <code>  txt_placa = ctk.CTkEntry(janela_veiculo, placeholder_text='Placa do Veículo. Formato: XXX000 ou XXX0X00', width=500)
-    txt_placa.pack(pady=(30,20))</code>
+<code>  txt_placa = ctk.CTkEntry(janela_veiculo, placeholder_text='Placa do Veículo. Formato: XXX000 ou XXX0X00', width=500)
+txt_placa.pack(pady=(30,20))</code>
 
-    Ao clicar no botão atribuir, o módulo chama a respectiva função do módulo db.py para aquela operação, por exemplo: adicionar_cliente.
+Ao clicar no botão atribuir, o módulo chama a respectiva função do módulo db.py para aquela operação, por exemplo: adicionar_cliente.
 
-    Estas funções possuem argumentos que devem ser passados aos parâmetros da função, e, caso retorne algum erro, então:
+Estas funções possuem argumentos que devem ser passados aos parâmetros da função, e, caso retorne algum erro, então:
 
-    <code>except Exception as e:
-        print('Erro!', e)
-        return False</code>
+<code>except Exception as e:
+            print('Erro!', e)
+            return False</code>
 
-    o sistema exibe o erro e retorna False.
+o sistema exibe o erro e retorna False.
 
-    Caso uma função de db.py retorne True, então os dados foram inseridos com suceso, caso contrário, houve algum erro. É exatamente esta condição que nós utilizamos para atualizar a label de erros ou acertos presente em cada janela.
+        
+Caso uma função de db.py retorne True, então os dados foram inseridos com suceso, caso contrário, houve algum erro. É exatamente esta condição que nós utilizamos para atualizar a label de erros ou acertos presente em cada janela.
 
-    <code>     btn_atribuir = ctk.CTkButton(janela_veiculo, text='Adicionar Veículo', command=lambda:lbl_erro.configure(text='Veículo Adicionado com Sucesso') if db.adicionar_veiculo(txt_placa.get(), txt_cor.get(), txt_modelo.get(), None if box_cpfcliente.get() == 'N e n h u m' else box_cpfcliente.get().split(' ')[0], None if box_cpffuncionario.get() == 'N e n h u m' else box_cpffuncionario.get().split(' ')[0]) else lbl_erro.configure(text='Erro ao adicionar! Revise os dados'))
+        
+<code>     btn_atribuir = ctk.CTkButton(janela_veiculo, text='Adicionar Veículo', command=lambda:lbl_erro.configure(text='Veículo Adicionado com Sucesso') if db.adicionar_veiculo(txt_placa.get(), txt_cor.get(), txt_modelo.get(), None if box_cpfcliente.get() == 'N e n h u m' else box_cpfcliente.get().split(' ')[0], None if box_cpffuncionario.get() == 'N e n h u m' else box_cpffuncionario.get().split(' ')[0]) else lbl_erro.configure(text='Erro ao adicionar! Revise os dados'))
  </code>
