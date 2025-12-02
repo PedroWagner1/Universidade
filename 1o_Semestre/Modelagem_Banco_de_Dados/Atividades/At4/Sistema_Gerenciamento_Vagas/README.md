@@ -35,17 +35,17 @@ Obs: O programa utiliza a fonte FreeMono (uma fonte que achei disponível no meu
 
 #   Sobre o Banco de Dados e o SGBD
 
-    O SGBD utilizado é mysql-server, é imprescendível que, para rodar o programa corretamente, antes deva-se configurar:
+O SGBD utilizado é mysql-server, é imprescendível que, para rodar o programa corretamente, antes deva-se configurar:
 
-    1. 
-   <code> conexao = pymysql.connect(host='127.0.0.1', user='root', password='rootp@ssw', database='sistema') </code>
+1. 
+<code> conexao = pymysql.connect(host='127.0.0.1', user='root', password='rootp@ssw', database='sistema') </code>
      Para os argumentos corretos
 
-    2.
-    Todos os comandos sql existentes no arquivo estrutura_bd.sql   
-        (um exemplo de fazer isso seria:) <code>    mysql -u root -p < estrutura_bd.sql </code>
+2.
+Todos os comandos sql existentes no arquivo estrutura_bd.sql   
+(um exemplo de fazer isso seria:) <code>    mysql -u root -p < estrutura_bd.sql </code>
 
-    3. Rodar o script criar_vagas.py uma única vez após ter rodado o arquivo .sql
+3. Rodar o script criar_vagas.py uma única vez após ter rodado o arquivo .sql
 
 
 
