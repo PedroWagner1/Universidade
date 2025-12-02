@@ -124,7 +124,7 @@ def listar_vagas():
 
 def listar_veiculos():
 
-    cursor.execute('SELECT Placa, Modelo FROM Veiculo;')
+    cursor.execute('SELECT Placa FROM Veiculo;')
     retorno = cursor.fetchall()
     lista = ["Nenhum"]
     for tupla in retorno:
@@ -148,3 +148,6 @@ def alocar_vaga(data_entrada, hora_entrada, bloco_vaga, numero_vaga, placa_veicu
     except Exception as e:
         print('Erro!', e)
         return False
+    
+
+print(listar_veiculos())
