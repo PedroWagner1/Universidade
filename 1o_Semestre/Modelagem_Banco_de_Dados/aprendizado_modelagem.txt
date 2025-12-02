@@ -1,0 +1,53 @@
+* Conceito de Banco de Dados 
+
+* Conceito de SGBD
+
+* Conceito de Sistema de Banco de Dados
+
+* Conceito de Banco de Dados Relacional (primeira proposta Edgar F. Codd 1970, IBM)
+
+* Conceito de Banco de Dados Não relacionais -> (Baseados em Documentos, baseados em chave-valor, baseados em Grafos e em colunas)
+
+* Restrições legais e Éticas (LGPD, princípio da beneficência e princípio da não maleficência)
+
+* MER (Modelo Entidade-Relacionamento) -> Entidades, Atributos (atributo simples, atributo composto, atributo derivado e atributo multivalorado)
+
+* Relacionamentos (1:1, N:M, 1:N) * importante fixação
+
+* Normalização de Dados (1FN , 2FN e 3FN) * importante fixação
+
+* DER (Diagrama Entidade-Relacionamento) -> Retângulos para entidades, círculos para atributos (círculos preenchidos para chaves primárias, círculo com ligação para outros círculos para atributo composto, losango para relacionamentos)
+
+* Chaves primárias, Chaves estrangeiras
+
+* Transformação Conceitual-Lógico: Relacionamentos (Tabela própria, adição de coluna e junção de tabelas) * importante fixação
+
+* Modelo EER (Entidade-Relacionamento Estendida, leva em consideração Programação Orientada a Objetos)
+
+* Cardinalidade * Importante fixação
+
+
+* Anomalias de Exclusão, Atualização e Inserção (Importante Fixação)
+
+* Dependência Funcional (Se A determina B, logo B é funcionalmente dependente de A)
+
+* Integridade Referencial, Integridade de Entidade e Integridade de Domínio
+
+* Entidades Regulares e Entidades Fracas + sua transformação para modelo relacional
+
+* Transformação de atributos compostos, derivados e multivalorados em modelo relacional (atributo composto deve ser decomposto em colunas atômicas, atributo multivalorado é convertido em tabela associativa e atributo derivado geralmente não é armazenado em banco de dados, entretanto pode ser por meio de procedures e trigger's calculados.)	
+
+* Transformação de Relacionamentos 1:N, N:M e 1:1 no modelo relacional (1:n vira coluna FK, N:M vira tabela própria e 1:1 pode ser tabela própria (menos eficiente), adição de FK ou fusão de tabelas (mantendo a FN2)) além de relacionamentos de grau superior (relacionamentos ternários.)
+
+* Redundância controlada e não controlada (redundância controlada é intencional e esperada, e redundância não controlada resulta de design inadequado e não deve ser aceita.)
+
+* Redundância de dados (mesmo dado armazenado em diferentes locais sem necessidade) e redundância de estruturas (estruturas quase idênticas sendo armazenadas como separadas sem necessidade)
+
+* Técnicas de Eliminação (Decomposição Sem Perda, Prevenção de Dependências)
+
+* BCNF Forma Normal de Boyce Codd (tendi poha nenhuma)
+
+* 4NF E 5NF (Tendi poha nenhuma)
+
+* Na prática a maioria dos sistemas usa até a 3FN (ainda bem kk)
+

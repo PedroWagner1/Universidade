@@ -1,0 +1,32 @@
+🔰 EXERCÍCIOS DO TEMA 1 — RELACIONAMENTOS (1:1, 1:N, N:M)
+
+Objetivo: fixar profundamente as cardinalidades.
+
+1. Classifique cada cenário com 1:1, 1:N ou N:M. Justifique.
+
+a) Pessoa — Passaporte
+b) Usuário — Postagens
+c) Aluno — Turmas
+d) Médico — Pacientes
+e) Funcionário — Armário pessoal
+f) Filme — Ator
+g) Veículo — Revisões
+h) Conta bancária — Titulares (conta conjunta existe!)
+
+
+
+a : 1:N Para transf. em lógico: Adição de Coluna em Passaporte apontando para FK em Pessoa
+
+b : 1:N Para rnsf em lógico: Adição de Coluna em Passaporte apontando para FK em Pessoa
+
+c : 1:N adiçao de coluna em Aluno indicando sua Turma (assumimos aqui que um aluno estaria pertencente  a somente 1 turma)
+
+d : (Assumindo que um paciente pode ter +1 médico) : N:M - Tabela própria para relacionamento
+
+e : 1:1
+
+f : N:M
+
+g : 1:n
+
+h : N:M

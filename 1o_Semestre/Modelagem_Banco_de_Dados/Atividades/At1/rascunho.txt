@@ -1,0 +1,89 @@
+1. Identificação:
+
+Título do Minimundo: Sistema de Monitoramento e Gestão para Estacionamento Privado.
+
+
+
+2. Visão geral e propósito do minimundo:
+
+Resumo do Cenário:
+
+Ao lado de um Shopping movimentado, há um estacionamento privado com 7 andares (blocos) e 30 vagas a cada andar. É nescessário a criação de um sistema de monitoramento e gestão para clientes neste estacionamento, devido a alta demanda de veículos que constantemente adentram e evadem do edifício.
+
+
+Objetivos Principais:
+
+O sistema de gestão e monitoramento do estacionamento deve:
+
+* Proporcionar o monitoramento claro e eficiente de todos os veículos que adentram ao estacionamento.
+
+* Gerenciar corretamente as vagas para cada veículo que adentra ao estacionamento, de forma segura e adequada.
+
+
+
+
+3. Escopo e Limites do Sistema:
+
+O que o sistema VAI FAZER (escopo incluso):
+
+O sistema deve:
+
+* Registrar as Entradas / Saídas de Veículos (data e hora de entrada, data e hora de saída, vaga atribuída, se é preferencial ou não)
+
+* Definir o estado de uma vaga (se está ocupada ou não)
+
+* Registrar informações nescessárias e requerentes acerca dos veículos (Placa, Tipo de veículo, Descrição do veículo, Dono do veículo)
+ 
+* Registrar informações nescessárias e requerentes acerca do cliente (Nome e CPF do cliente, Idade do cliente, Se possui deficiência ou não, se é gestante)
+
+
+* Definir a vaga de um veículo dinamicamente (se o cliente tiver +60 anos, for deficiente ou gestante, é uma vaga preferencial.) realizando verificações a respeito do estado de uma vaga atribuída (se estiver ocupada, não deve ser atribuída)
+
+* Relacionar uma vaga com o veículo atualmente ocupando ela (caso haja), como também relacionar um veículo com o proprietário dele.
+
+
+* Registrar os funcionários do estacionamento e permitir a atribuição de vaga sem lógica de pagamento atribuída
+
+* Definir um preço baseado em uma lógica que use como base o tempo no qual um veículo residiu em uma vaga (horário atual - horário de entrada)
+antes de liberar o veículo e registrar o horário de saída.
+
+* Bloquear a entrada caso não haja vagas disponíveis
+
+
+
+
+
+
+O que o sistema NÃO VAI FAZER (Escopo excluso):
+
+O sistema não deve:
+
+
+* Considerar se pode ou não ser o dono do veículo que está usando o veículo (sempre será o dono)
+
+* Verificar ou atualizar status de pagamentos para decidir se um veículo irá ser registrado com horário de saída ou não (a cancela só é liberada após a emissão da nota fiscal)
+
+* Reconsiderar vagas após atribuição (vaga atribuída será a vaga utilizada sem possibilidade de reatribuição até que o cliente tenha saído e adentrado novamente)
+
+
+* Realizar sistemas de alarme ou reporte (Por exemplo: se o veículo não saiu do estabelecimento, ou se o valor não foi pago), o sistema de segurança é atribuído aos vigilantes.
+
+* Realizar cálculos para melhor atribuição de vagas, por exemplo: caso haja vagas no bloco A (primeiro andar), não se deve atribuir veículo A na vaga de bloco B para melhor acesso. Esta verificação não deve ser implementada devido a já existente alta demanda e rotacionamento de veículos.
+
+
+
+
+
+4. Atores e Processos Principais:
+
+   Principais Atores:
+
+Cliente – Responsável por utilizar efetivamente o serviço. Realiza o cadastro fornecendo ao sistema seus dados (CPF, Nome, Etc) 
+
+Funcionário – Possui acesso ilimitado ao estacionamento, sem necessidade de pagamento. Funcionarios podem ser operários de guincho, vigilantes, etc
+
+
+
+Processos e Operações Fundamentais:
+
+Quando um cliente se aproxima da cancela, a placa do veículo, juntamente com sua cor e modelo é capturado por uma câmera OCR, assim que o cliente realiza a entrada fornecendo seus dados, tal veículo é atribuído às informações do Cliente e registrado como um veículo de sua autoria. O sistema fornece ao cliente uma vaga contendo o andar (bloco) e o número da vaga. Esta vaga é então atualizada para o estado de ocupada, até que o cliente registre sua saída do estabelecimento. Quando o cliente fornece seus dados no sistema que antecede a cancela, antes da cancela ser liberada o horário de entrada é registrado. Para sair, o cliente se direciona para o sistema que antecede a cancela de saída e requisita saída, assim, é realizado um cálculo com base no horário atual (horário de saída) - horário de entrada + lógica aplicada para definição de preço, o pagamento é exibido para o usuário final e a cancela só é liberada após pagamento. Assim que a saída é requisitada e o horário de saída é definido, automaticamente a vaga muda do estado de ocupada para livre idependente de estado de pagamento aprovado ou não. A identificação do cliente e do veículo para a definição de pagamento e afins é feita através de uma câmera OCR que identifica a placa, atribuindo-a a sua vaga ocupada e ao cliente.

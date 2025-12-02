@@ -1,0 +1,6 @@
+Um dos desafios encontrados durante a modelagem conceitual utilizando o DER, foi a respeito da melhor representação das entidades de usuários e suas relações.
+
+Fiquei em um empasse entre: Generalizar Cliente e Funcionário em uma entidade Pessoa para então especializá-los em entidades separadas ou adicionar relacionamentos Aloca e Possui para ambas as entidades Cliente e Funcionário. A minha idéia de fazer isso foi, diminuir a redundância de relacionamentos, tendo em vista que os relacionamentos "Possui" e "Aloca" de cliente teria de ser implementado também para Funcionário. Logo pensei em especializar Funcionário e Cliente em subentidades de Pessoa, mas decidi não o fazer. Isto porque me forçaria a criar uma entidade separada com unicamente 3 atributos: FK para pessoa, Se é gestante ou não, se é deficiente. E então eu teria de criar uma entidade funcionario com somente dois atributos: FK para pessoa e Função. Minha escolha foi optar por não criar entidades com pouquíssimos atributos desta forma.
+
+É importante separar cliente e funcionário como entidades diferentes para a aplicação da lógica de preços, definida na análise de requisitos do minimundo.
+
