@@ -2,6 +2,10 @@
 
 Este é um projeto que implementa efetivamente, não só a aplicação dos comandos SQL para transformar o modelo lógico em uma aplicação real, mas também implementa a nível de conceito um programa GUI para interação com usuário através da linguagem Python e da biblioteca Tkinter. Neste caso, para maior elegância visual estarei utilizando o customtkinter, o SGBD utilizado será o Mysql e a biblioteca que irei usar para integrar o SGBD com o programa será o pymysql.
 
+O repositório em questão apresenta um trabalho da Faculdade Referente à Banco de Dados e Linguagem SQL.
+
+O projeto apresenta a aplicação física do modelo lógico feito nas outras atividades e sua integração com um aplicativo interativo feito co customtkinter e Python
+
 
 Para uma melhor organização do código, utilizei a notação húngara (conceito que aprendi durante meus estudos de VB.NET)
 
@@ -42,3 +46,13 @@ Obs: O programa utiliza a fonte FreeMono (uma fonte que achei disponível no meu
         (um exemplo de fazer isso seria:) <code>    mysql -u root -p < estrutura_bd.sql </code>
 
     3. Rodar o script criar_vagas.py uma única vez após ter rodado o arquivo .sql
+
+
+
+#   O arquivo db.py
+
+Este arquivo é o responsável por realizar as consultas e as alterações no Banco de Dados efetivamente através da biblioteca pymysql.
+
+Eu fui desenvolvendo as funções de uso deste arquivo conforme eu via necessidade das implementações com o aplivativo.
+
+A maioria das funções são chamadas quando o usuário clica em algum botão referente.
